@@ -11,7 +11,7 @@ from langchain.document_loaders import SeleniumURLLoader
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.vectorstores import FAISS
 from dotenv import load_dotenv
-
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 load_dotenv()  # take environment variables from .env (especially openai api key)
 
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
